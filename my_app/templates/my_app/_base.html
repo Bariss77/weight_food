@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Weight and food.</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+</head>
+
+<body>
+
+  <h2><a href='/index'>Weight</a>
+  <a href='/food'>Food</a>
+  <a href='/new_food'>New food</a></h2>
+
+  {% block content %}
+  {% endblock %}
+
+  <div class="container">
+    <img src="{% static 'my_app/image/dog_02.jpg' %}" class="img-thumbnail">
+</body>
+
+</html>

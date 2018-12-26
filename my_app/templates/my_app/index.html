@@ -1,8 +1,38 @@
 {%  extends "my_app/_base.html" %}
 
 {% block content %}
- <div>
-   <h3>Weight</h3>
-   <p>Ввод и вывод веса.</p>
- </div>
- {% endblock %}
+
+<style>
+#n3 {
+line-height: 10px;
+}
+</style>
+
+<div style="overflow: hidden;">
+    <div style="width: 100%;">
+
+        <div style="float: left; width:47%; border: 1px solid white;">
+          <div >
+            <p align="center"> content</p>
+          </div>
+        </div>
+
+        <div style="float: left; width:15%; border: 1px solid white; ">
+          <h1 align="center">Weight:</h1>
+          {% for v in object_list %}
+          <p id="n3" align="center">{{v.weight}}</p>
+          {% endfor %}
+        </div>
+
+        <div style="float: left; width:22%; border: 1px solid white;">
+          <h1 align="left">Date:</h1>
+          {% for v in object_list %}
+          <p id="n3">{{v.date|date:"d.m.Y H:i"}}</p>
+          {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

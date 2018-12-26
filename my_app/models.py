@@ -1,13 +1,10 @@
 from django.db import models
-from django.utils import timezone
+from datetime import datetime
 
 
 class Weight(models.Model):
     weight = models.CharField(max_length=5)
-    date = models.DateTimeField()
+    date = models.DateTimeField(default=datetime.now())
 
     def _str__(self):
-        return str(self.weight)
-
-    #def _str__(self):
-    #    return str(self.date)    
+        return self.weight

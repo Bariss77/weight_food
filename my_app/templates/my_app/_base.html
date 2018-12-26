@@ -9,15 +9,16 @@
 
 <body>
 
-  <h2><a href='/index'>Weight</a>
-  <a href='/food'>Food</a>
-  <a href='/new_food'>New food</a></h2>
+  <h1 style="border: 3px solid blue"; align="center">
+    <a href='/index'>Weight</a>
+    <a href='/form_weight'>Enter weight</a>
+    <a href='/food'>Food</a>
+    <a href='/new_food'>New food</a>
+  </h1>
 
   {% block content %}
   {% endblock %}
 
-  <div class="container">
-    <img src="{% static 'my_app/image/dog_02.jpg' %}" class="img-thumbnail">
 </body>
 
 </html>
